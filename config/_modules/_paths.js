@@ -7,4 +7,5 @@ module.exports = {
   images: path.resolve(__dirname, '../../src/assets/images'),
   fonts: path.resolve(__dirname, '../../src/assets/fonts'),
   docs: path.resolve(__dirname, '../../src/assets/documents'),
+  libs: path.resolve(__dirname, '../../src/app/libs'),
 }
