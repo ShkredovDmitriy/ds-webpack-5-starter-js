@@ -1,0 +1,27 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: url("#{$file-path}.woff2") format("woff2"), url("#{$file-path}.woff") format("woff");
+  }
+}
+
+@mixin media-notebook {
+  @media screen and (max-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 570px) {
+    @content;
+  }
+}
