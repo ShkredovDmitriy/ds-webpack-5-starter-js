@@ -5,7 +5,8 @@ const devServer = require('./_modules/_devServer');            // local http ser
 const tsLoaderDev = require('./_modules/_tsLoaderDev');        // transform ts to js, use babel, insert to head
 const pugLoader = require('./_modules/_pugLoader');            // transform pug to html, export to index.html
 const scssLoaderDev = require('./_modules/_scssLoaderDev');    // autoprefix styles, insert to head
-const copyStaticDev = require('./_modules/_copyStaticDev');        // copy images, fonts, docs from src to temp
+const copyStaticDev = require('./_modules/_copyStaticDev');    // copy images, fonts, docs from src to temp
+const lintCSS = require("./_modules/sass.lint");
 
 module.exports = env => {
   return merge([
@@ -16,5 +17,6 @@ module.exports = env => {
     scssLoaderDev(),
     tsLoaderDev(),
     copyStaticDev(),
+    // lintCSS()
   ]);
 };
