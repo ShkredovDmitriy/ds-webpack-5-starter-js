@@ -3,6 +3,24 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = function() {
   return {
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: paths.images,
+            to: "images",
+          },
+          {
+            from: paths.docs,
+            to: "documents",
+          },
+          {
+            from: paths.libs,
+            to: "js",
+          },
+        ],
+      }),
+    ],
     module: {
       rules: [
         {
