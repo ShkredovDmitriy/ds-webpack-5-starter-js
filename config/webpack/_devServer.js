@@ -5,6 +5,7 @@ module.exports = function() {
     devServer: {
       historyApiFallback: true,
       contentBase: paths.dist,
+      inline: true,
       open: true,
       compress: false,
       hot: true,

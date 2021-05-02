@@ -2,15 +2,14 @@ block variables
 
 doctype html
 html(lang="ru-RU")
-    head
-        meta(charset="utf-8")
-        title #{title}
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    body(class=pageClass)
-        .svg-sprive
-            include ../assets/sprites/sprite.svg
-        .main-wrapper
-            block content
-
-        script(src="js/example-lib.min.js")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  body(class=pageClass)
+    .svg-sprive
+      include ../assets/sprites/sprite.svg
+    .main-wrapper
+      block content
+    script(src="js/jquery.min.js")

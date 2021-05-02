@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/ShkredovDmitriy/ds-webpack5-starter#readme",
   "devDependencies": {
-    "@types/lodash": "^4.14.168",
+    
     "autoprefixer": "^10.2.5",
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
@@ -45,5 +45,12 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.5",
+    "@popperjs/core": "^2.6.0",
+    "@types/bootstrap": "^5.0.13",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0"
   }
 }

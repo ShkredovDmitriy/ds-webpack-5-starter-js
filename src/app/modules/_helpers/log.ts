@@ -1,8 +1,8 @@
-const log = (text:string) => {
+const log = (props:any) => {
   if (process.env.NODE_ENV === 'development') {
-    console.log('/**************************/')
-    console.log(text)
-    console.log('/**************************/')
+    console.log('/********' + props.header + '**********/');
+    console.log(props.body);
+    console.log('/**************************/');
   }
 }
 
