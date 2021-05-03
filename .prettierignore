@@ -1,0 +1,6 @@
+/.git
+/.vscode
+config
+dist
+node_modules
+src/styles

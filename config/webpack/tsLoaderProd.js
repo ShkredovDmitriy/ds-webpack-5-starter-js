@@ -1,3 +1,5 @@
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = function() {
   return {
     module: {
@@ -5,24 +7,24 @@ module.exports = function() {
         // Typescript loader
         {
           test: /\.ts$/,
-          exclude: [/node_modules/, /config/],
+          exclude: [/node_modules/, /config/, /dist/],
           use: 'ts-loader',
         },
         // Babel
         {
-          test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          test: /\.js$/,
+          exclude: [/node_modules/, /config/, /dist/],
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env'],
+              presets: ['@babel/preset-env']
             }
           }
-        },
+        }
       ],
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".json"],
+      extensions: [".ts", ".js"],
     },
   }
 }

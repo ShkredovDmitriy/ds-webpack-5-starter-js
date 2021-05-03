@@ -3,6 +3,7 @@ const paths = require('./_paths');
 module.exports = function() {
   return {
     devServer: {
+      overlay: true,
       historyApiFallback: true,
       contentBase: paths.dist,
       inline: true,

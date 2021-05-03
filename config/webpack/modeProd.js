@@ -2,11 +2,11 @@ const paths = require('./_paths');
 
 module.exports = function() {
   return {
-    mode: 'development',
+    mode: 'production',
     entry: [paths.src + '/app/main.ts'],
     output: {
       path: paths.dist,
-      filename: 'js/main.min.js?[hash]',
+      filename: 'js/main.min.js?[fullhash]',
     },
   }
 }

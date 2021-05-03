@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = function() {
   return {
@@ -32,6 +33,7 @@ module.exports = function() {
           ],
         }
       ]
-    }
+    },
+    plugins: [new StylelintPlugin()],
   }
 }
