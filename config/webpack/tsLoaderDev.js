@@ -1,4 +1,6 @@
-module.exports = function() {
+const ESLintPlugin = require('eslint-webpack-plugin');
+
+module.exports = function () {
   return {
     module: {
       rules: [
@@ -16,13 +18,14 @@ module.exports = function() {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-            }
-          }
+            },
+          },
         },
       ],
     },
+    plugins: [new ESLintPlugin()],
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: ['.ts', '.js'],
     },
-  }
-}
+  };
+};
