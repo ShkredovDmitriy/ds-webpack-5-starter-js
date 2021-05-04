@@ -2,9 +2,9 @@
 Universal template for quick website development based on webpack 5.
 
 ## Components
-Template consists of a large number of components.
+Template consists of a large number of components:
 
-### Webpack 5
+#### Webpack 5
 Webpack is a static module bundler for modern JavaScript applications.
 Template structure:
 
