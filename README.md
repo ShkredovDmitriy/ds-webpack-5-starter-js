@@ -42,3 +42,8 @@ tsconfig.json        # typescript config file
 ### Favicons
 
 ### Clean
+
+### FTP Deploy
+You can upload build files to the server using ftp deploy, specify ftp settings in the file .env. 
+command: npm run deploy
+
