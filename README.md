@@ -57,7 +57,7 @@ npm run build
 ```
 
 #### FTP Deploy
-You can upload build files to the server using ftp deploy, specify ftp settings in the file .env. 
+You can upload build files to the server using ftp deploy, specify ftp settings in .env file. 
 ```
 npm run deploy
 ```
