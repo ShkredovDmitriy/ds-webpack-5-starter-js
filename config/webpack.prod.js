@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const modeProd = require('./webpack/modeProd');                    // webpack mode, entry and output points
 const cleanDistFolder = require('./webpack/cleanDistFolder');      // clear "build" folder for clear building
 const tsLoaderProd = require('./webpack/tsLoaderProd');            // transform ts to js, use babel, use uglify, export to main.min.js
-const pugLoader = require('./webpack/pugLoader');                  // transform pug to html, export to index.html
+const pugLoaderProd = require('./webpack/pugLoaderProd');                  // transform pug to html, export to index.html
 const copyStaticProd = require('./webpack/copyStaticProd');        // copy images, fonts, from src to build
 const scssLoaderProd = require('./webpack/scssLoaderProd');        // minimize styles, autoprefix styles, export to main.min.css
 const favicon = require('./webpack/favicon');                      // generate favicons from assets/images/favicon.png
@@ -14,7 +14,7 @@ module.exports = env => {
     modeProd(),
     cleanDistFolder(),
     tsLoaderProd(),
-    pugLoader(),
+    pugLoaderProd(),
     copyStaticProd(),
     scssLoaderProd(),
     favicon()

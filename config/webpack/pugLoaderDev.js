@@ -7,7 +7,7 @@ module.exports = function() {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: paths.src + '/pages/index.pug',
-        inject: true,
+        inject: 'body',
       }),
     ],
     module: {

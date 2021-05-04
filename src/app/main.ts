@@ -1,5 +1,5 @@
 import "../styles/scss/main.scss";
 import log from './modules/_helpers/log';
 
-log({header: "log name", body: "log text"});
+log("TEST TITLE", "Test body");
 $('.header').addClass('jquery-test');
