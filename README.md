@@ -8,6 +8,7 @@ Template consists of a large number of components.
 Webpack is a static module bundler for modern JavaScript applications.
 Template structure:
 
+```
 config/              # webpack config files
 dist/                # project build files
 node_modules/        # all modules and dependencies
@@ -20,6 +21,7 @@ package-lock.json    # standart file
 package.json         # standart file
 README.md            # standart file
 tsconfig.json        # typescript config file
+```
 
 ### Pug
 
