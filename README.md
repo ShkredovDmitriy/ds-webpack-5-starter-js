@@ -33,19 +33,35 @@ README.md            # standart file
 tsconfig.json        # typescript config file
 ```
 
-### Pug
+#### Pug
 
-### SCSS
+#### SCSS
 
-### Typescript
+#### Typescript
 
-### Favicons
+#### Favicons
 
-### Clean
+#### Clean
 
-### FTP Deploy
+## Commands
+Use the following commands:
+
+#### Start
+```
+npm run start
+```
+
+#### Build
+```
+npm run build
+```
+
+#### FTP Deploy
 You can upload build files to the server using ftp deploy, specify ftp settings in the file .env. 
 ```
 npm run deploy
 ```
 
+## License
+
+This project is under the MIT license.
