@@ -1,9 +1,67 @@
 # ds-webpack5-starter
-    stylelint — сам линтер,
-    stylelint-scss — плагин для работы с .scss файлами,
-    stylelint-config-standard — стандартный конфиг для stylelint, который включает в себя стайл гайд AirBnB и другие общепринятые принципы,
-    stylelint-order — плагин для проверки порядка свойств,
-    stylelint-config-idiomatic-order — правила порядка свойств,
-    prettier — Prettier для форматирования кода,
-    stylelint-prettier — для форматирования кода с помощью Prettier,
-    stylelint-config-prettier — отключает правила, конфликтующие с Prettier.
+Universal template for quick website development based on webpack 5.
+
+## Components
+Template consists of a large number of components:
+
+#### Webpack 5
+Webpack is a static module bundler for modern JavaScript applications.
+Template structure:
+
+```
+config/              # webpack config files
+dist/                # project build files
+node_modules/        # all modules and dependencies
+pixel-perfect/       # images for a perfect layout, browser addon Pixel Perfect Pro
+src
+  |_ tests/          # files for unit testing
+  |_ app/            # ts and js files
+  |_ assets/         # images, fonts, documents, sprites
+  |_ blocks/         # header, footer, section
+  |_ components/     # nav, ul
+  |_ elements/       # a, span, button
+  |_ pages/          # entry points for pages
+  |_ styles/         # style and syle libs
+  |_ templates/      # templates for pages
+.env-sample          # sample config file
+.gitignore           # files excluded from uploading to github
+.stylelintignore     # files excluded from stylelint
+.stylelintrc.js      # stylelint config file
+package-lock.json    # standart file
+package.json         # standart file
+README.md            # standart file
+tsconfig.json        # typescript config file
+```
+
+#### Pug
+
+#### SCSS
+
+#### Typescript
+
+#### Favicons
+
+#### Clean
+
+## Commands
+Use the following commands:
+
+#### Start
+```
+npm run start
+```
+
+#### Build
+```
+npm run build
+```
+
+#### FTP Deploy
+You can upload build files to the server using ftp deploy, specify ftp settings in .env file. 
+```
+npm run deploy
+```
+
+## License
+
+This project is under the MIT license.
