@@ -13,6 +13,16 @@ config/              # webpack config files
 dist/                # project build files
 node_modules/        # all modules and dependencies
 pixel-perfect/       # images for a perfect layout   (jpg, png)
+src
+  |_ tests           # files for unit testing
+  |_ app/            # ts and js files
+  |_ assets          # images, fonts, documents, sprites
+  |_ blocks          # header, footer, section
+  |_ components      # nav, ul
+  |_ elements        # a, span, button
+  |_ pages           # entry points for pages
+  |_ styles          # style and syle libs
+  |_ templates       # templates for pages
 .env-sample          # sample config file
 .gitignore           # files excluded from uploading to github
 .stylelintignore     # files excluded from stylelint
