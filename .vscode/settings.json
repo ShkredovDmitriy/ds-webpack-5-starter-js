@@ -14,4 +14,24 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.exclude": {
+    "**/.git": true,
+  },
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/dev/app/libs": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/config": true,
+  },
+  "scss.scannerExclude": [
+    "**/.git",
+    "**/node_modules",
+    "**/dev/app/libs",
+    "**/bower_components",
+    "**/build",
+    "**/config",
+  ],
+  "editor.fontLigatures": false,
 }
