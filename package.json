@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "webpack serve --config ./webpack.dev.js",
     "build": "webpack --config ./webpack.prod.js",
-    "deploy": "node ./deploy"
+    "deploy": "node ./deploy",
+    "api": "node server"
   },
   "repository": {
     "type": "git",
@@ -69,7 +70,10 @@
     "@popperjs/core": "^2.6.0",
     "@types/bootstrap": "^5.0.13",
     "@types/jquery": "^3.5.5",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
     "save-dev": "*"
   },
