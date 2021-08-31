@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const autoprefixer = require('autoprefixer');
+const fs = require('fs');
 
 const paths = {
   src: path.resolve(__dirname, 'src'),
@@ -16,6 +17,20 @@ const paths = {
   docs: path.resolve(__dirname, 'src/assets/documents'),
   libs: path.resolve(__dirname, 'src/app/libs'),
 };
+
+function generateHtmlPlugins() {
+  const templateFiles = fs.readdirSync(paths.src + '/pages/');
+  return templateFiles.map((item) => {
+    const parts = item.split('.');
+    const name = parts[0];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: paths.src + `/pages/${name}/${name}.pug`,
+    });
+  });
+}
+
+const htmlPlugins = generateHtmlPlugins();
 
 module.exports = (env) => {
   return {
@@ -31,12 +46,6 @@ module.exports = (env) => {
     plugins: [
       new Dotenv(),
       new CleanWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: paths.src + '/pages/index/index.pug',
-        inject: 'body',
-        minify: false,
-      }),
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -83,7 +92,7 @@ module.exports = (env) => {
       }),
 
       new BundleAnalyzerPlugin(),
-    ],
+    ].concat(htmlPlugins),
     module: {
       rules: [
         {
