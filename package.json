@@ -6,7 +6,7 @@
   "description": "Universal webpack template for creating websites",
   "private": true,
   "scripts": {
-    "dev": "webpack serve --config ./webpack.dev.js",
+    "dev": "webpack serve --open --mode development --env development --config ./webpack.dev.js",
     "build": "webpack --config ./webpack.prod.js",
     "deploy": "node ./deploy",
     "api": "node server"

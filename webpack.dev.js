@@ -36,6 +36,7 @@ module.exports = (env) => {
       path: paths.dist,
       filename: 'js/main.min.js?[fullhash]',
     },
+    target: 'web',
     resolve: {
       extensions: ['.ts', '.js'],
     },
@@ -43,11 +44,12 @@ module.exports = (env) => {
       clientLogLevel: 'error',
       overlay: true,
       contentBase: paths.dist,
-      open: true,
       compress: false,
       hot: true,
       port: 8080,
       host: '0.0.0.0',
+      historyApiFallback: true,
+      watchContentBase: true,
     },
     plugins: [
       new Dotenv(),
