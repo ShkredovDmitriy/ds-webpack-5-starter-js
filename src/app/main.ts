@@ -1,12 +1,12 @@
 import '../styles/scss/main.scss';
 
-require('./ts/types');
-require('./ts/interfaces');
-require('./ts/enums');
+require('./_constants/types');
+require('./_constants/interfaces');
+require('./_constants/enums');
 
 // TODO: обсудить с командой структуру папок и файлов
 
-import log from './modules/_helpers/log';
+import log from './_helpers/log';
 
 log('TEST TITLE', 'Test body');
 $('.header').addClass('jquery-test');
