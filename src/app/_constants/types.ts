@@ -1,2 +1,2 @@
-type tUserRole = 'member' | 'moderator' | 'admin';
-type tUserName = string;
+type TUserRole = 'member' | 'moderator' | 'admin';
+type TUserName = string;

@@ -1,16 +1,16 @@
-interface iUser {
+interface IUser {
   userId: string;
-  userRole: tUserRole;
-  firstName: tUserName;
-  lastName: tUserName;
+  userRole: TUserRole;
+  firstName: TUserName;
+  lastName: TUserName;
 }
 
-interface iMember extends iUser {
+interface iMember extends IUser {
   userRole: 'member';
   inviteLink: string;
 }
 
-interface iAdmin extends iUser {
+interface iAdmin extends IUser {
   userRole: 'admin';
   adminLevel: number;
 }

@@ -1,10 +1,13 @@
 # ds-webpack5-starter
+
 Universal template for quick website development based on webpack 5.
 
 ## Components
+
 Template consists of a large number of components:
 
 #### Webpack 5
+
 Webpack is a static module bundler for modern JavaScript applications.
 Template structure:
 
@@ -44,20 +47,25 @@ tsconfig.json        # typescript config file
 #### Clean
 
 ## Commands
+
 Use the following commands:
 
 #### Start
+
 ```
-npm run start
+npm run dev
 ```
 
 #### Build
+
 ```
 npm run build
 ```
 
 #### FTP Deploy
-You can upload build files to ftp server using ftp deploy, specify ftp settings in .env file. 
+
+You can upload build files to ftp server using ftp deploy, specify ftp settings in .env file.
+
 ```
 npm run deploy
 ```
