@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  frontend:
+    image: node:16.13.1-alpine3.15
+    tty: true
+    stdin_open: true
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
+      - /usr/src/app/build
+    ports:
+      - 8080:8080
+
+    restart: always
+    command: /bin/sh -c "yarn install && yarn dev"
