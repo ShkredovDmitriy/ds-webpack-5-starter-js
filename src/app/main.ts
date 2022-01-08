@@ -19,4 +19,22 @@ const admin: iAdmin = {
   adminLevel: 3,
 };
 
+function* idGeterator(start: number) {
+  let index: number = start;
+  while (true) {
+    yield index++;
+  }
+}
+
+const gen = idGeterator(25);
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+
 console.log(admin.firstName);
