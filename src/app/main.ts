@@ -7,8 +7,11 @@ require('./_constants/enums');
 // TODO: обсудить с командой структуру папок и файлов
 
 import log from './_helpers/log';
+log('Test title', 'Test body');
 
-log('TEST TITLE', 'Test body');
+import { sum } from './_helpers/sum';
+log('Function sum', sum(1, 2));
+
 $('.header').addClass('jquery-test');
 
 const admin: iAdmin = {
