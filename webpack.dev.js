@@ -30,25 +30,26 @@ const htmlPlugins = generateHtmlPlugins();
 module.exports = (env) => {
   return {
     mode: 'development',
+    target: 'web',
     devtool: 'eval',
     entry: './src/app/main.ts',
     output: {
       path: paths.dist,
       filename: 'js/main.min.js?[fullhash]',
     },
-    target: 'web',
     resolve: {
       extensions: ['.ts', '.js'],
     },
     devServer: {
+      open: true,
       clientLogLevel: 'error',
       overlay: true,
       contentBase: paths.dist,
       compress: false,
-      hot: true,
       port: 8080,
       host: '0.0.0.0',
-      historyApiFallback: true,
+      // historyApiFallback: true,
+      hot: false,
       watchContentBase: true,
     },
     plugins: [
