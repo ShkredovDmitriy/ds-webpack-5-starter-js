@@ -32,7 +32,7 @@ module.exports = (env) => {
     mode: 'development',
     target: 'web',
     devtool: 'eval',
-    entry: './src/app/main.ts',
+    entry: './src/app/main.js',
     output: {
       path: paths.dist,
       filename: 'js/main.min.js?[fullhash]',

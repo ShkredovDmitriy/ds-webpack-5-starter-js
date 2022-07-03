@@ -1,17 +1,14 @@
 // DEFAULTS
-@import "./mixins.scss";
-@import "./fonts.scss";
-@import "./vars.scss";
-@import "./reset.scss";
-
-// LIBS
-// @import "../libs/libs.scss";
+@import './mixins.scss';
+@import './fonts.scss';
+@import './vars.scss';
+@import './reset.scss';
 
 // ELEMENTS
-@import "../../elements/elements.scss";
+@import '../../elements/elements.scss';
 
 // COMPONENTS
-@import "../../components/components.scss";
+@import '../../components/components.scss';
 
 // BLOCKS
-@import "../../blocks//blocks.scss";
+@import '../../blocks//blocks.scss';
