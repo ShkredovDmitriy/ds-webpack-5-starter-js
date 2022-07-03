@@ -49,6 +49,13 @@ tsconfig.json        # typescript config file
 
 Use the following commands:
 
+
+#### Install
+
+```
+npm install
+```
+
 #### Start
 
 ```
