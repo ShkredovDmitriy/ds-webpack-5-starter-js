@@ -15,9 +15,8 @@ Template structure:
 config/              # webpack config files
 dist/                # project build files
 node_modules/        # all modules and dependencies
-pixel-perfect/       # images for a perfect layout, browser addon Pixel Perfect Pro
+pixel-perfect/       # images for a perfect layout, browser addon Perfect Pixel Pro
 src
-  |_ tests/          # files for unit testing
   |_ app/            # ts and js files
   |_ assets/         # images, fonts, documents, sprites
   |_ blocks/         # header, footer, section
