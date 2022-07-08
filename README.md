@@ -2,53 +2,50 @@
 
 Universal template for quick website development based on webpack 5.
 
-## Components
+#### Libraries
 
-Template consists of a large number of components:
+- Pug
+- SCSS
+- Typescript
+- babel
+- Favicons
+- FTP Deploy
 
-#### Webpack 5
-
-Webpack is a static module bundler for modern JavaScript applications.
-Template structure:
+#### Structure
 
 ```
-config/              # webpack config files
-dist/                # project build files
-node_modules/        # all modules and dependencies
-pixel-perfect/       # images for a perfect layout, browser addon Pixel Perfect Pro
+dist/                # build files
 src
-  |_ tests/          # files for unit testing
   |_ app/            # ts and js files
   |_ assets/         # images, fonts, documents, sprites
   |_ blocks/         # header, footer, section
   |_ components/     # nav, ul
   |_ elements/       # a, span, button
   |_ pages/          # entry points for pages
-  |_ styles/         # style and syle libs
+  |_ styles/         # style and style libs
   |_ templates/      # templates for pages
+  |_ tests/          # files for unit tess
 .env-sample          # sample config file
+.eslintignore        # files excluded from eslint
 .gitignore           # files excluded from uploading to github
 .stylelintignore     # files excluded from stylelint
 .stylelintrc.js      # stylelint config file
+deploy.js            # script for ftp deploing
+jest.config.js       # jest config file
 package-lock.json    # standart file
 package.json         # standart file
-README.md            # standart file
+README.md            # project documentation
 tsconfig.json        # typescript config file
+webpack.dev.js       # webpack config for developming
+webpack.prod.js      # webpack config for production
 ```
 
-#### Pug
+## Installation
+Please use nodejs version 16 or newer
 
-#### SCSS
-
-#### Typescript
-
-#### Favicons
-
-#### Clean
-
-## Commands
-
-Use the following commands:
+```
+npm install
+```
 
 #### Start
 
@@ -64,7 +61,7 @@ npm run build
 
 #### FTP Deploy
 
-You can upload build files to ftp server using ftp deploy, specify ftp settings in .env file.
+You can upload build files to ftp server, specify ftp settings in .env file
 
 ```
 npm run deploy

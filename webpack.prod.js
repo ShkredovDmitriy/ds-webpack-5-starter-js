@@ -36,7 +36,7 @@ const htmlPlugins = generateHtmlPlugins();
 module.exports = (env) => {
   return {
     mode: 'production',
-    entry: './src/app/main.js',
+    entry: './src/app/main.ts',
     output: {
       path: paths.dist,
       filename: 'js/main.min.js?[fullhash]',

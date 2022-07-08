@@ -32,7 +32,7 @@ module.exports = (env) => {
     mode: 'development',
     target: 'web',
     devtool: 'eval',
-    entry: './src/app/main.js',
+    entry: './src/app/main.ts',
     output: {
       path: paths.dist,
       filename: 'js/main.min.js?[fullhash]',
@@ -48,7 +48,6 @@ module.exports = (env) => {
       compress: false,
       port: 8080,
       host: '0.0.0.0',
-      // historyApiFallback: true,
       hot: false,
       watchContentBase: true,
     },
