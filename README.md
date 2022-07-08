@@ -25,7 +25,7 @@ src
   |_ pages/          # entry points for pages
   |_ styles/         # style and style libs
   |_ templates/      # templates for pages
-  |_ tests/          # files for unit tess
+  |_ tests/          # jest unit tests
 .env-sample          # sample config file
 .eslintignore        # files excluded from eslint
 .gitignore           # files excluded from uploading to github
