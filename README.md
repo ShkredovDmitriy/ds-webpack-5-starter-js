@@ -7,6 +7,7 @@ Webpack 5 based template for quick website development
 - Pug
 - SCSS
 - Typescript
+- Jest
 - Babel
 - Favicons
 - FTP Deploy
