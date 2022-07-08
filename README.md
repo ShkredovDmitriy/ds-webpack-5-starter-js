@@ -15,14 +15,7 @@ Webpack 5 based template for quick website development
 #### Structure
 
 ```
-<<<<<<< HEAD
 dist/                # build files
-=======
-config/              # webpack config files
-dist/                # project build files
-node_modules/        # all modules and dependencies
-pixel-perfect/       # images for a perfect layout, browser addon Perfect Pixel Pro
->>>>>>> 1010b92b5ceb842459a32542f33040eb90cd0a0c
 src
   |_ app/            # ts and js files
   |_ assets/         # images, fonts, documents, sprites
