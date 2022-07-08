@@ -42,7 +42,7 @@ webpack.prod.js      # webpack config for production
 ```
 
 ## Installation
-Please use nodejs version 16 or newer
+Please use Nodejs 16 or newer
 
 ```
 npm install
