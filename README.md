@@ -48,13 +48,6 @@ Please use Nodejs 16 or newer
 npm install
 ```
 
-
-#### Install
-
-```
-npm install
-```
-
 #### Start
 
 ```
