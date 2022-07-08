@@ -1,13 +1,13 @@
 # ds-webpack5-starter
 
-Universal template for quick website development based on webpack 5.
+Webpack 5 based template for quick website development 
 
 #### Libraries
 
 - Pug
 - SCSS
 - Typescript
-- babel
+- Babel
 - Favicons
 - FTP Deploy
 
