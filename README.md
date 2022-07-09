@@ -1,6 +1,8 @@
 # ds-webpack5-starter
 
-Webpack 5 based template for quick website development 
+Webpack 5 based template for quick website development
+
+[Demo](https://shkredovdmitriy.github.io/ds-webpack5-starter/)
 
 #### Libraries
 
