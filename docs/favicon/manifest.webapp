@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "ds-webpack5-starter",
+  "description": "Universal webpack template for creating websites",
+  "icons": {
+    "60": "firefox_app_60x60.png",
+    "128": "firefox_app_128x128.png",
+    "512": "firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "shkredovdmitriy@gmail.com",
+    "url": null
+  }
+}
