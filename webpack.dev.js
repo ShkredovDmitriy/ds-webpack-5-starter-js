@@ -1,141 +1,97 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const fs = require('fs');
+const PugPlugin = require('pug-plugin');
 
-const paths = {
-  src: path.resolve(__dirname, 'src'),
-  dist: path.resolve(__dirname, 'dist'),
-  images: path.resolve(__dirname, 'src/assets/images'),
-  docs: path.resolve(__dirname, 'src/assets/documents'),
-  libs: path.resolve(__dirname, 'src/app/libs'),
-};
+const Src = path.resolve(__dirname, 'src');
+const Images = Src + '/assets/images/';
+const Documents = Src + '/assets/documents/';
+const Fonts = Src + '/fonts/';
+const Blocks = Src + '/blocks';
+const Components = Src + '/blocks';
+const Elements = Src + '/elements';
+const Templates = Src + '/templates';
 
-function generateHtmlPlugins() {
-  const templateFiles = fs.readdirSync(paths.src + '/pages/');
-  return templateFiles.map((item) => {
-    const parts = item.split('.');
-    const name = parts[0];
-    return new HtmlWebpackPlugin({
-      filename: `${name}.html`,
-      template: paths.src + `/pages/${name}/${name}.pug`,
-    });
-  });
-}
-
-const htmlPlugins = generateHtmlPlugins();
-
-module.exports = (env) => {
+module.exports = () => {
   return {
     mode: 'development',
     target: 'web',
     devtool: 'eval',
-    entry: './src/app/main.ts',
+    entry: {
+      index: './src/pages/index.pug',
+      about: './src/pages/about.pug',
+      products: './src/pages/products.pug',
+    },
     output: {
-      path: paths.dist,
-      filename: 'js/main.min.js?[fullhash]',
+      path: path.join(__dirname, 'dist/'),
+      publicPath: '/',
     },
-    resolve: {
-      extensions: ['.ts', '.js'],
-    },
+    stats: 'errors-warnings',
+    devtool: 'source-map',
     devServer: {
       open: true,
-      clientLogLevel: 'error',
-      overlay: true,
-      contentBase: paths.dist,
       compress: false,
       port: 8080,
       host: '0.0.0.0',
       hot: false,
-      watchContentBase: true,
+    },
+    resolve: {
+      alias: {
+        Images,
+        Fonts,
+        Blocks,
+        Components,
+        Elements,
+        Templates,
+      },
     },
     plugins: [
       new Dotenv(),
+      new PugPlugin({
+        pretty: true,
+        extractComments: true,
+        js: {
+          filename: './js/[name].[contenthash:8].js',
+        },
+        css: {
+          filename: './css/[name].[contenthash:8].css',
+        },
+      }),
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: paths.images,
+            from: Images,
             to: 'images',
           },
           {
-            from: paths.docs,
+            from: Documents,
             to: 'documents',
-          },
-          {
-            from: paths.libs,
-            to: 'js',
           },
         ],
       }),
-    ].concat(htmlPlugins),
+    ],
     module: {
       rules: [
         {
-          test: /\.pug$/,
-          loader: 'pug-loader',
+          test: /.pug$/,
+          loader: PugPlugin.loader,
         },
         {
-          test: /\.ts$/,
-          exclude: [/node_modules/, /config/, /dist/],
-          use: 'ts-loader',
+          test: /\.(css|sass|scss)$/,
+          use: ['css-loader', 'sass-loader'],
         },
         {
-          test: /\.js$/,
-          exclude: [/node_modules/, /config/, /dist/],
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
+          test: /\.(png|jpg|jpeg|svg|ico)/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/[name].[ext]',
           },
         },
         {
-          test: /\.scss$/,
-          use: [
-            {
-              loader: 'style-loader',
-            },
-            {
-              loader: 'css-loader',
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                postcssOptions: {
-                  plugins: [autoprefixer()],
-                },
-              },
-            },
-            {
-              loader: 'resolve-url-loader',
-              options: {
-                root: paths.src + '/assets/',
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-              },
-            },
-          ],
-        },
-        {
-          test: /\.(jpg|png|webp|svg)$/,
-          loader: 'file-loader',
-          options: {
-            publicPath: './',
-            name: 'images/[name].[ext]?[hash]',
-          },
-        },
-        {
-          test: /\.(woff|woff2)$/,
-          loader: 'file-loader',
-          options: {
-            publicPath: './',
-            name: 'fonts/[name].[ext]?[hash]',
+          test: /\.(woff|woff2)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name][ext][query]',
           },
         },
       ],

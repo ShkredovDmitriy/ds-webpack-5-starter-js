@@ -1,6 +1,6 @@
 # ds-webpack5-starter
 
-Webpack 5 based template for quick website development
+Webpack 5 based template for quick website development (updated 04.02.2023)
 
 [Demo](https://shkredovdmitriy.github.io/ds-webpack5-starter/)
 
@@ -8,10 +8,6 @@ Webpack 5 based template for quick website development
 
 - Pug
 - SCSS
-- Typescript
-- Jest
-- Babel
-- Favicons
 - FTP Deploy
 
 #### Structure
@@ -25,26 +21,21 @@ src
   |_ components/     # nav, ul
   |_ elements/       # a, span, button
   |_ pages/          # entry points for pages
-  |_ styles/         # style and style libs
+  |_ styles/         # styles SCSS
   |_ templates/      # templates for pages
-  |_ tests/          # jest unit tests
 .env-sample          # sample config file
-.eslintignore        # files excluded from eslint
 .gitignore           # files excluded from uploading to github
-.stylelintignore     # files excluded from stylelint
-.stylelintrc.js      # stylelint config file
 deploy.js            # script for ftp deploing
-jest.config.js       # jest config file
 package-lock.json    # standart file
 package.json         # standart file
 README.md            # project documentation
-tsconfig.json        # typescript config file
 webpack.dev.js       # webpack config for developming
 webpack.prod.js      # webpack config for production
 ```
 
 ## Installation
-Please use Nodejs 16 or newer
+
+Please use Nodejs 18 or newer
 
 ```
 npm install
@@ -53,7 +44,7 @@ npm install
 #### Start
 
 ```
-npm run dev
+npm run start
 ```
 
 #### Build

@@ -10,15 +10,30 @@
   padding-left: 1.875rem;
   box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.25);
   background-color: $color-blue;
-}
 
-.header__link {
-  display: block;
-  margin-left: auto;
+  &__nav-list {
+    display: flex;
+  }
 
-  svg {
+  &__nav-item {
+    &:nth-child(n + 2) {
+      margin-left: 1.875rem;
+    }
+  }
+
+  &__nav-link {
+    font-size: 1.125rem;
+    color: $color-white;
+  }
+
+  &__link {
     display: block;
-    width: 2rem;
-    height: 2rem;
+    margin-left: auto;
+
+    svg {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
