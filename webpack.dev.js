@@ -2,6 +2,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PugPlugin = require('pug-plugin');
+const autoprefixer = require('autoprefixer');
 
 const Src = path.resolve(__dirname, 'src');
 const Images = Src + '/assets/images/';
@@ -78,7 +79,18 @@ module.exports = () => {
         },
         {
           test: /\.(css|sass|scss)$/,
-          use: ['css-loader', 'sass-loader'],
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [autoprefixer()],
+                },
+              },
+            },
+            'sass-loader',
+          ],
         },
         {
           test: /\.(png|jpg|jpeg|svg|ico)/,

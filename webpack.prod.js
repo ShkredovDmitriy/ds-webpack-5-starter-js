@@ -2,6 +2,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PugPlugin = require('pug-plugin');
+const autoprefixer = require('autoprefixer');
 
 const Src = path.resolve(__dirname, 'src');
 const Images = Src + '/assets/images/';
@@ -28,13 +29,18 @@ module.exports = () => {
     },
     stats: 'errors-warnings',
     devtool: 'source-map',
-    devServer: {
-      open: true,
-      compress: false,
-      port: 8080,
-      host: '0.0.0.0',
-      hot: false,
-    },
+    // optimization: {
+    //   runtimeChunk: 'single',
+    //   splitChunks: {
+    //     cacheGroups: {
+    //       vendor: {
+    //         test: /[\\/]node_modules[\\/].+\.(js|ts)$/, // use exactly this Regexp
+    //         name: 'vendor',
+    //         chunks: 'all',
+    //       },
+    //     },
+    //   },
+    // },
     resolve: {
       alias: {
         Images,
@@ -78,7 +84,18 @@ module.exports = () => {
         },
         {
           test: /\.(css|sass|scss)$/,
-          use: ['css-loader', 'sass-loader'],
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [autoprefixer()],
+                },
+              },
+            },
+            'sass-loader',
+          ],
         },
         {
           test: /\.(png|jpg|jpeg|svg|ico)/,
