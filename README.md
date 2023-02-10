@@ -9,6 +9,7 @@ Webpack 5 based template for quick website development (updated 04.02.2023)
 - Pug
 - SCSS
 - Autoprefixer
+- Babel
 - FTP Deploy
 
 #### Structure
