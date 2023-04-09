@@ -1,4 +1,4 @@
-# ds-webpack5-starter
+# ds-webpack-5-starter-js
 
 Webpack 5 based template for quick website development (updated 09.04.2023)
 
