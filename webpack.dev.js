@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 
 const Src = path.resolve(__dirname, 'src');
 const Images = Src + '/assets/images/';
+const Favicons = Src + '/assets/favicons/';
 const Documents = Src + '/assets/documents/';
 const Fonts = Src + '/fonts/';
 const Blocks = Src + '/blocks';
@@ -67,6 +68,10 @@ module.exports = () => {
           {
             from: Documents,
             to: 'documents',
+          },
+          {
+            from: Favicons,
+            to: 'favicons',
           },
         ],
       }),
