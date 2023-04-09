@@ -1,3 +1,12 @@
 dist
 node_modules
+src
+/.editorconfig
+/.env-sample
 /.env
+deploy.js
+package-lock.json
+package.json
+README.md
+webpack.dev.js
+webpack.prod.js

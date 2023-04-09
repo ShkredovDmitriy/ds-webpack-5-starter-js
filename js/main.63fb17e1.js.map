@@ -1,1 +1,0 @@
-{"version":3,"file":"./js/main.63fb17e1.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://ds-webpack5-starter/./src/app/main.js"],"sourcesContent":["console.log(\"ds-webpack5-starter\");"],"names":["console","log"],"sourceRoot":""}
