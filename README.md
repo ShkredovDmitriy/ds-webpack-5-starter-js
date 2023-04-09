@@ -1,6 +1,6 @@
 # ds-webpack5-starter
 
-Webpack 5 based template for quick website development (updated 04.02.2023)
+Webpack 5 based template for quick website development (updated 09.04.2023)
 
 [Demo](https://shkredovdmitriy.github.io/ds-webpack5-starter/)
 
@@ -15,21 +15,21 @@ Webpack 5 based template for quick website development (updated 04.02.2023)
 #### Structure
 
 ```
-dist/                # build files
+dist/                # build
 src
-  |_ app/            # ts and js files
-  |_ assets/         # images, fonts, documents, sprites
+  |_ app/            # ts, js files
+  |_ assets/         # pdf, images, fonts, documents, sprites
   |_ blocks/         # header, footer, section
   |_ components/     # nav, ul
-  |_ elements/       # a, span, button
-  |_ pages/          # entry points for pages
-  |_ styles/         # styles SCSS
-  |_ templates/      # templates for pages
+  |_ elements/       # a, p, span, button
+  |_ pages/          # entry points for pages (Pug)
+  |_ styles/         # styles (SCSS)
+  |_ templates/      # templates for pages (Pug)
 .env-sample          # sample config file
 .gitignore           # files excluded from uploading to github
 deploy.js            # script for ftp deploing
-package-lock.json    # standart file
-package.json         # standart file
+package-lock.json    # standart nodejs file
+package.json         # standart nodejs file
 README.md            # project documentation
 webpack.dev.js       # webpack config for developming
 webpack.prod.js      # webpack config for production
